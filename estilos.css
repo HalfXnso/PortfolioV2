@@ -4,11 +4,11 @@ body {
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,
-    rgba(18, 24, 34, 1) 63%
+    rgba(18, 24, 34, 1) 73%
   );
 }
 .parent {
-  width: 80%;
+  width: 90%;
   margin: 2% auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -67,6 +67,26 @@ body {
   border: 1px solid black;
 }
 
+.carrusel {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  gap: 0;
+}
+.elemento {
+  width: 40%;
+  flex: 1 0 auto;
+  margin: 0 20px;
+  padding: 0;
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+.elemento img {
+  width: 100%;
+}
 .div4 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
@@ -80,13 +100,22 @@ body {
   grid-row-start: 6;
   border-radius: 5px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .div6 {
   position: relative;
   grid-row-start: 6;
   border-radius: 5px;
+  background-image: url(https://msmk.university/wp-content/uploads/2023/09/internet-3592056_640.jpg);
+  background-size: cover;
   border: 1px solid black;
+}
+.div6 h1 {
+  text-align: center;
 }
 
 .div1,
@@ -95,8 +124,28 @@ body {
 .div4,
 .div5,
 .div6 {
-  background-color: #202837b2;
+  background-color: #19213088;
   backdrop-filter: blur(80px);
   color: white;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.084) 2px 2px 2px;
+}
+#socials ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#socials img {
+  width: 60px;
+  z-index: 2;
+}
+#socials li {
+  transition: 0.25s ease-in-out;
+}
+#socials li:hover {
+  transform: translateY(-15px);
 }
