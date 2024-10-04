@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copiar texto oculto al portapapeles</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .copy-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .copy-button:hover {
+        background-color: #45a049;
+      }
+
+      #status {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      /* Texto oculto */
+      .hidden-text {
+        position: absolute;
+        left: -9999px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejemplo de copiar texto oculto al portapapeles</h1>
+
+    <button class="copy-button" onclick="copyHiddenText()">
+      Copiar texto oculto
+    </button>
+
+    <p id="status"></p>
+
+    <!-- Texto oculto -->
+    <p id="hiddenText" class="hidden-text">alfonsogaitanperez@gmail.com</p>
+
+    <script>
+      function copyHiddenText() {
+        // Crear un elemento de selección temporal
+        var hiddenText = document.getElementById("hiddenText").innerText;
+
+        // Crear un área de texto temporal en el DOM
+        var tempInput = document.createElement("textarea");
+        tempInput.value = hiddenText;
+        document.body.appendChild(tempInput);
+
+        // Seleccionar el contenido del área de texto
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Para móviles
+
+        // Copiar el texto al portapapeles
+        document.execCommand("copy");
+
+        // Eliminar el elemento temporal
+        document.body.removeChild(tempInput);
+
+        // Mostrar mensaje de éxito
+        document.getElementById("status").innerText =
+          "¡Email copiado al portapapeles!";
+      }
+    </script>
+  </body>
+</html>

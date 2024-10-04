@@ -48,6 +48,7 @@ body {
   grid-row: span 2 / span 2;
   border-radius: 5px;
   border: 1px solid black;
+  overflow: hidden;
 }
 
 .div2 {
@@ -64,29 +65,67 @@ body {
   grid-column-start: 3;
   grid-row-start: 5;
   border-radius: 5px;
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.301);
+  box-shadow: rgba(0, 0, 0, 0.445) 2px 2px 2px;
+  backdrop-filter: blur(8px);
+  padding: 1%;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.div3:hover{
+  background-color: rgba(255, 255, 255, 0.795);
+
 }
 
+.div3 h1 {
+  margin: 0;
+  margin-bottom: 2%;
+}
 .carrusel {
-  width: 100%;
+  width: 100%; /* El ancho del contenedor será el 100% del padre */
+  height: 50%; /* Ajusta la altura */
+  margin: 0 auto;
+  overflow: hidden; /* Oculta los elementos fuera del contenedor */
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* Efecto de desvanecimiento */
+}
+
+.carrusel .carrusel-track {
   display: flex;
-  justify-content: start;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  gap: 0;
+
+  width: max-content; /* Asegura que los elementos no se rompan en varias líneas */
+  animation: scroll 30s linear infinite; /* La animación será lineal e infinita */
 }
-.elemento {
-  width: 40%;
-  flex: 1 0 auto;
-  margin: 0 20px;
-  padding: 0;
+
+.carrusel .elemento {
+  min-width: 320px; /* Ancho mínimo de cada elemento */
+  margin-right: -170px; /* Margen entre los elementos */
 }
-.carrusel::-webkit-scrollbar {
-  display: none;
+
+.carrusel .elemento img {
+  width: 120px; /* Las imágenes ocupan todo el ancho del elemento */
 }
-.elemento img {
-  width: 100%;
+#cshar{
+  width: 10px; /* Las imágenes ocupan todo el ancho del elemento */
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Empieza desde el principio */
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Mueve la mitad de los elementos duplicados */
+  }
+}
+
 .div4 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
@@ -97,13 +136,22 @@ body {
 }
 
 .div5 {
+  background-color: rgba(255, 255, 255, 0.301);
   grid-row-start: 6;
+  box-shadow: rgba(0, 0, 0, 0.219) 2px 2px 2px;
   border-radius: 5px;
-  border: 1px solid black;
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.div5:hover{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+.div5 h1 {
+  margin-top: 0;
 }
 
 .div6 {
@@ -120,9 +168,7 @@ body {
 
 .div1,
 .div2,
-.div3,
 .div4,
-.div5,
 .div6 {
   background-color: #19213088;
   backdrop-filter: blur(80px);
@@ -136,7 +182,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
 #socials img {
