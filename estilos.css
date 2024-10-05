@@ -69,13 +69,8 @@ body {
   box-shadow: rgba(0, 0, 0, 0.445) 2px 2px 2px;
   backdrop-filter: blur(8px);
   padding: 1%;
-  cursor: pointer;
   transition: 0.25s ease-in-out;
 }
-.div3:hover {
-  background-color: rgba(255, 255, 255, 0.548);
-}
-
 .div3 h1 {
   margin: 0;
   margin-bottom: 2%;
@@ -93,6 +88,7 @@ body {
     black 90%,
     transparent
   ); /* Efecto de desvanecimiento */
+  margin-bottom: 1%;
 }
 
 .carrusel .carrusel-track {
@@ -131,6 +127,27 @@ body {
   grid-row-start: 3;
   border-radius: 5px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.301);
+  backdrop-filter: blur(80px);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.341) 2px 2px 2px;
+}
+.experiencias {
+  border-radius: 5px;
+  width: 100%; /* Ancho del contenedor */
+  height: 90%; /* Altura fija del contenedor */
+  overflow-y: scroll; /* Activa el scroll vertical */
+  scrollbar-width: none;
+}
+.experiencias div {
+  margin-top: 5%;
+  border-radius: 5px;
+  height: 20vh;
+  background-color: rgba(255, 255, 255, 0.301);
+  padding: 2%;
 }
 
 .div5 {
@@ -166,13 +183,12 @@ body {
 
 .div1,
 .div2,
-.div4,
 .div6 {
-  background-color: #19213088;
+  background-color: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(80px);
   color: white;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.084) 2px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.652) 2px 2px 2px;
 }
 #socials ul {
   display: flex;
@@ -208,7 +224,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.1s ease;
+  transition: 0.1s ease-in-out;
   height: 5dvh;
   font-family: "Kay Pho Du", serif;
 }
