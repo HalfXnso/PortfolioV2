@@ -72,9 +72,8 @@ body {
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
-.div3:hover{
-  background-color: rgba(255, 255, 255, 0.795);
-
+.div3:hover {
+  background-color: rgba(255, 255, 255, 0.548);
 }
 
 .div3 h1 {
@@ -98,7 +97,6 @@ body {
 
 .carrusel .carrusel-track {
   display: flex;
-
   width: max-content; /* Asegura que los elementos no se rompan en varias líneas */
   animation: scroll 30s linear infinite; /* La animación será lineal e infinita */
 }
@@ -109,9 +107,9 @@ body {
 }
 
 .carrusel .elemento img {
-  width: 120px; /* Las imágenes ocupan todo el ancho del elemento */
+  width: 100px; /* Las imágenes ocupan todo el ancho del elemento */
 }
-#cshar{
+#cshar {
   width: 10px; /* Las imágenes ocupan todo el ancho del elemento */
 }
 
@@ -147,8 +145,8 @@ body {
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
-.div5:hover{
-  background-color: rgba(255, 255, 255, 0.795);
+.div5:hover {
+  background-color: rgba(255, 255, 255, 0.548);
 }
 .div5 h1 {
   margin-top: 0;
@@ -194,4 +192,31 @@ body {
 }
 #socials li:hover {
   transform: translateY(-15px);
+}
+.verMas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#abrir-modal {
+  cursor: pointer;
+  width: 50%;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.363);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+  height: 5dvh;
+  font-family: "Kay Pho Du", serif;
+}
+
+#abrir-modal:hover {
+  background-color: rgba(255, 255, 255, 0.548);
+}
+
+#abrir-modal:active {
+  margin-top: 0.25%;
 }
