@@ -14,6 +14,7 @@
     <title>Document</title>
   </head>
   <body>
+    <img id="joel" src="/media/nse-6966921449423824866-1000006218.jpg" alt="">
     <div class="parent">
       <div class="div1">
         <h1>Alfonso Gaitán Pérez</h1>
@@ -240,5 +241,16 @@
         </div>
       </div>
     </div>
+    
+    <script>
+      // Seleccionamos la imagen
+      const imagen = document.getElementById('joel');
+
+      // Agregamos un evento click a la imagen
+      imagen.addEventListener('click', function() {
+          // Cambiamos la opacidad para que la imagen desaparezca gradualmente
+          imagen.style.opacity = '0';
+      });
+  </script>
   </body>
 </html>
