@@ -43,12 +43,15 @@ body {
   opacity: 1;
 }
 #joel {
-  position: absolute;
-  z-index: 2;
-  object-fit: cover;
+  position: absolute; /* Imagen con posición absoluta */
+  z-index: 2; /* Asegura que esté por encima de otros elementos */
+  object-position: top;
+  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
   width: 99%;
   height: 100%;
   top: 0;
+  transition: opacity 0.5s ease; /* Transición para opacidad */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
 }
 
 .div1 {
