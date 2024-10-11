@@ -47,9 +47,10 @@ body {
   z-index: 2; /* Asegura que esté por encima de otros elementos */
   object-position: top;
   object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
-  width: 99%;
-  height: 100%;
-  top: 0;
+  width: 90%;
+  height: 92%;
+  top: 4%;
+  left: 5%;
   transition: opacity 0.5s ease; /* Transición para opacidad */
   cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
 }
@@ -120,8 +121,8 @@ body {
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 90%,
+    black 20%,
+    black 80%,
     transparent
   ); /* Efecto de desvanecimiento */
   margin-bottom: 1%;
@@ -272,4 +273,89 @@ body {
 #abrir-modal:active {
   box-shadow: rgba(0, 0, 0, 0) 2px 2px 2px;
   margin-top: 0.25%;
+}
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+
+.modal-contenido {
+  background-color: #ffffff52;
+  margin: 2% auto;
+  padding: 20px;
+  width: 90%;
+  height: 90dvh;
+  text-align: center;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0; 
+  transition: opacity 0.4s ease; 
+}
+
+.modal-contenido {
+  background-color: #ffffffa6;
+  margin: 2% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 90%;
+  height: 86%;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.cerrar {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: rgb(95, 95, 95);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-activo {
+  display: block;
+  opacity: 1; 
+}
+
+
+.modal-activo .modal-contenido {
+  opacity: 1; 
+  transform: scale(1); 
 }
