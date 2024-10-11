@@ -29,17 +29,35 @@
       <div class="div2">
         <h1>Proyectos propios</h1>
         <div class="proyectos">
-          <div>VoltPath</div>
-          <div>BendittaShop Basada en la web https://bendittashop.es/</div>
-          <div>Página de noticias de aula Campus hecha con boostrap</div>
-          <div>Efecto Parallax en el mario bros</div>
-          <div style="position: relative">
-            <h3 style="position: absolute; padding-left: 2%">
-              ToDo List con react
-            </h3>
-            <h3 style="position: absolute; bottom: 0; right: 0; padding: 2%">
-              Work in progress
-            </h3>
+          <div class="proyectos-div">VoltPath</div>
+          <div class="proyectos-div">
+            BendittaShop Basada en la web https://bendittashop.es/
+          </div>
+          <div class="proyectos-div">
+            Página de noticias de aula Campus hecha con boostrap
+          </div>
+          <div>
+            <video
+              autoplay
+              loop
+              style="width: 50%; height: 100%"
+              src="media/clip alejandro.mp4"
+            ></video>
+            <div>
+              <h3>Efecto Parallax en el mario bros</h3>
+              <div>
+                <img width="10%" src="/media/iconosSlider/c--4.svg" alt="" />
+                <img
+                  width="10%"
+                  src="/media/iconosSlider/unity-svgrepo-com.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="proyectos-div">
+            <h3>ToDo List con react</h3>
+            <h3>Work in progress</h3>
             <img
               style="
                 object-fit: cover;
@@ -51,8 +69,8 @@
               alt=""
             />
           </div>
-          <div>7</div>
-          <div>8</div>
+          <div class="proyectos-div">7</div>
+          <div class="proyectos-div">8</div>
         </div>
       </div>
       <div class="div3">
@@ -119,7 +137,6 @@
                 alt="Java"
               />
             </div>
-            <!-- Duplicamos los elementos para crear un bucle continuo -->
             <div class="elemento">
               <img src="media/iconosSlider/java-svgrepo-com.svg" alt="Java" />
             </div>
@@ -211,7 +228,7 @@
           <img
             width="100%"
             style="position: absolute; z-index: 1; height: 100%"
-            src="media/327b2bd5e15f14babee855b74ee4549b.gif"
+            src="media/eZ1jb3rEHIqmdlmb69.5f8da6ca9da28.gif"
             alt=""
           />
           <div class="descarga">
@@ -265,49 +282,6 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById("joel").addEventListener("click", function () {
-        // Cambiamos la opacidad a 0 para la transición
-        this.style.opacity = "0";
-
-        // Después de 500ms (el tiempo de la transición), ocultamos la imagen
-        setTimeout(() => {
-          this.style.display = "none"; // Ocultamos la imagen
-        }, 500); // Coincide con el tiempo de la transición
-      });
-
-      var modal = document.getElementById("miModal");
-      var btn = document.getElementById("abrir-modal");
-      var span = document.getElementsByClassName("cerrar")[0];
-
-      // Función para abrir el modal
-      function abrirModal() {
-        modal.style.display = "block"; // Mostrar el modal
-        setTimeout(() => {
-          modal.classList.add("modal-activo"); // Agregar clase para activar transiciones
-        }, 10); // Retardo para asegurar que se aplique la clase después de mostrarlo
-      }
-
-      // Función para cerrar el modal
-      function cerrarModal() {
-        modal.classList.remove("modal-activo"); // Quitar clase de transición
-        setTimeout(() => {
-          modal.style.display = "none"; // Ocultar el modal después de la transición
-        }, 400); // Tiempo igual al de la transición
-      }
-
-      // Cuando el usuario hace clic en el botón, abrir el modal
-      btn.onclick = abrirModal;
-
-      // Cuando el usuario hace clic en el botón "cerrar", cerrar el modal
-      span.onclick = cerrarModal;
-
-      // Cuando el usuario hace clic fuera del modal, cerrarlo
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          cerrarModal();
-        }
-      };
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
