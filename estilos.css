@@ -1,5 +1,5 @@
 body {
-  font-family: "Kay Pho Du", serif;
+  font-family: "Protest Strike", sans-serif;
   background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
@@ -93,10 +93,31 @@ body {
   scrollbar-width: none;
 }
 .proyectos .proyectos-div {
+  overflow: hidden;
   border-radius: 5px;
   height: 15dvh;
+  padding: 1%;
+  display: flex;
+
+  position: relative;
   background-color: rgba(255, 255, 255, 0.301);
 }
+
+.proyectos-div h3 {
+  width: 100%;
+  overflow: visible;
+  border: 1px solid red;
+
+  text-wrap: wrap ;
+  padding: 1%;
+  margin: 0;
+}
+#progreso {
+  background-image: url(media/wip.gif);
+  background-size: cover;
+  background-position: center;
+}
+
 .div3 {
   grid-column: span 3 / span 3;
   grid-row: span 2 / span 2;
